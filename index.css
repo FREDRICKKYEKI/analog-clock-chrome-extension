@@ -1,0 +1,234 @@
+@import url('https://fonts.cdnfonts.com/css/alarm-clock');
+@import url('https://fonts.cdnfonts.com/css/blocktastic');
+@import url('https://fonts.cdnfonts.com/css/futura-md-bt');
+body{
+    display: flex;
+}
+#canvas{
+    font-family: 'Blocktastic', sans-serif;
+    opacity: .96;
+
+}
+#digital-clock{
+    height: max-content;
+    width: 83px;
+    background-color:  rgba(128, 128, 128, 0.103);
+    backdrop-filter: blur(10px) saturate(29%);
+    position: absolute;
+    left: 37%;
+    top: 200px;
+    border: 1px solid rgba(128, 128, 128, 0.336);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    font-stretch: extra-expanded;
+    padding: 6px;
+}
+#verse{
+    border-radius: 5px;
+    margin: 6px;
+    text-align: center;
+    font-family: 'futura Md BT', sans-serif;
+    max-width: 300px;
+    font-size: large;
+    position: relative;
+    animation: slide-bottom 1   s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes slide-bottom {
+    0% {
+        opacity: .2;
+      -webkit-transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+      -webkit-transform: translateY(0);
+    }
+}
+#back p{
+    background-color: rgba(255, 255, 255, 0.829);
+    padding: 3px;
+    cursor: pointer;
+}
+#verse::before{
+    content: "";
+    position: absolute;
+    top: -15px;
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 20;
+    cursor: pointer;
+}
+#back{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(80px); 
+    transition: all .3s;
+    overflow: hidden;
+}
+#insta{
+    position: absolute;
+    top: 0;
+}
+#insta:hover{
+    opacity: .9;
+}
+#insta:active{
+    opacity: .7;
+}
+#random{
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: rgb(253, 135, 24) ;
+}
+#random:hover{
+    color: rgb(248, 139, 38) ;
+}
+#random:active{
+    color: rgb(255, 123, 0) ;
+}
+.tooltiptext{
+    visibility: hidden;
+    font-family:'futura Md BT', sans-serif ;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.568);   
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 110%;
+    backdrop-filter:blur(10px) saturate(30%);
+}
+#insta .tooltiptext, #alarm-clock .tooltiptext{
+    left: 110%;
+    top: 5px;
+    width: max-content;
+}
+
+.tooltiptext::after{
+    content: " ";
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.507);
+}
+#random .tooltiptext::after{
+    left: 100%; 
+}
+#insta .tooltiptext::after{
+    right: 100% !important;
+    border-color: transparent rgba(0, 0, 0, 0.507)  transparent transparent;
+}
+#alarm-clock .tooltiptext::after{
+    right: 100% !important;
+    border-color: transparent rgba(0, 0, 0, 0.507)  transparent transparent;
+}
+#random:hover .tooltiptext{
+    visibility: visible;
+}
+#insta:hover .tooltiptext{
+    visibility: visible;
+}
+#alarm-clock:hover .tooltiptext{
+    visibility: visible;
+    margin-left: -30px;
+    margin-top: -10px;
+    padding: 6px;
+}
+#alarm-clock{
+    position: absolute;
+    top: 170px;
+    left: 45.6%;
+    z-index: 2;
+    width: 56px; 
+    cursor: pointer;
+    transition: all .4s;
+}
+#alarm-clock img{
+    transition: all .1s;
+    opacity: .5;
+}
+#alarm-clock:hover img{
+    content: url(media/alarm_dark.png);
+    transform: scale(1.1);
+    animation: shake  .6s  linear ;
+    animation-iteration-count: infinite;
+    animation-delay: .3s;
+    opacity: 1;
+}
+@keyframes shake{
+    0%{transform: scale(1.0);
+        transform: rotate(5deg);}
+    10%{transform: rotate(-5deg);}
+    20%{transform: rotate(5deg);}
+    30%{transform: rotate(-5deg);}
+    40%{transform: rotate(5deg);}
+    50%{transform: rotate(-5deg);}
+    60%{transform: rotate(5deg);}
+    70%{transform: rotate(-5deg);}
+    75%{transform: rotate(0deg);}
+    80%{transform: rotate(0deg);}
+    85%{transform: rotate(0deg);}
+    90%{transform: rotate(0deg);}
+    100%{transform: rotate(0deg);
+    }
+
+
+}
+
+#alarm-clock:active img{
+    content: url(media/alarm.png);
+    transform: scale(1);
+   
+}
+#alarm-settings{
+    height:400px;
+    width: 0;
+    background-image: linear-gradient(to bottom, rgba(137, 43, 226, 0.445), rgba(255, 0, 255, 0.274));
+    /* transition: all .1s; */
+    overflow: hidden;
+}
+#alarm-settings i{
+    position: absolute;
+    top: 0;
+    margin: 6px;
+    cursor: pointer;
+    font-size: large;
+    overflow: hidden;
+}
+center{
+ margin-top: 50px;
+}
+#alarms{
+    background-color: rgb(255, 255, 255);
+    height: 120px;
+    margin: 5px;
+    padding: 9px;
+    margin-top: 150px;  
+    overflow: scroll;
+    font-family: 'futura Md BT ', sans-serif;
+
+}
+::-webkit-scrollbar{
+    opacity: 0;
+}
+#time{
+    height: 100px;
+    
+}
+#alarm-settings {
+    font-family: 'blocktastic', sans-serif;
+}

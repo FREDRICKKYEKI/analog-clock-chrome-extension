@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css"/>    <link rel="icon" href="media/899054.png" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>    
+    <title>Analog Clock</title>
+</head>
+<body> 
+    <div id="back">
+        <div style="position: relative; backdrop-filter: blur(0px) saturate(29%);">
+            <canvas id="canvas" width="300" height="300" style="border-radius:10%;"></canvas>
+            <div style="width: 20vw; display: flex; justify-content: center;">
+                <div id="digital-clock"></div>
+            </div>
+            <p style="display: none;" id="verse"></p>
+            <span id="random" class="glyphicon glyphicon-random">
+                <span  class="tooltiptext">Randomize Background</span>
+            </span>
+        </div>
+        <a id="insta" href="https://www.instagram.com/fred_i_am/" target="_blank">
+            <img  src="https://img.icons8.com/color/48/null/instagram-new--v1.png"/>
+            <label for="insta" class="tooltiptext">Follow Me</label>
+        </a>
+        <div id="alarm-clock">
+            <img id="alarm-icon" src="media/alarm.png" width="26px"/>
+        </div>     
+    </div>
+    <audio id="alarm-sound"></audio>
+    <div id="alarm-settings">
+        <i id="backAlarm" class="fa fa-arrow-left" aria-hidden="true"></i>
+        <center>
+            <h4><b>Set Alarm</b></h4>
+            <div>
+                <input id="timePicker" type="time"/>
+                <button id="set-alarm-btn">Set</button>
+            </div>
+        </center>
+         <div id="alarms">
+                    <b><u>Alarms Set</u></b>
+                    <p id="time"></p>
+                </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
