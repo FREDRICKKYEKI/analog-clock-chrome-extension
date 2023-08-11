@@ -6,14 +6,13 @@ Welcome to the Analog Clock Chrome Extension with Alarm and Daily Bible Verse pr
 Certainly! Here's the Table of Contents for your Analog Clock Chrome Extension with Alarm and Daily Bible Verse project:
 
 ### Contents
-1. [Introduction](#Introduction)
-2. [Installation](#Installation)
-3. [Features](#Features)
-4. [Usage](#Usage)
-5. [Customization](#Customization)
-6. [Credits](#Credits)
-7. [License](#License)
-8. [Contact](#Contact)
+1. [Installation](#installation)
+1. [Features](#features)
+1. [Usage](#usage)
+1. [Customization](#customization)
+1. [Credits](#credits)
+1. [License](#license)
+1. [Contact](#contact)
 
 
 ## Installation
