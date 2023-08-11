@@ -1,7 +1,8 @@
 let timePickerAlarm;
+let loading = true;
 let alarmBtn = document.getElementById("set-alarm-btn");
 let alarmTime = document.getElementById("time");
-let verseDiv = document.getElementById("verse");
+let verse = document.getElementById("verse");
 let alarmSound = document.getElementById("alarm-sound");
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
@@ -25,11 +26,14 @@ const urls = [
 
 alarmSound.src = "media/beautifulName.mp3";
 
-verseDiv.innerHTML = "Verse Loading...";
+verse.innerHTML = "Verse Loading...";
 
 setTimeout(() => {
-  if (verseDiv.innerHTML.length < 1) verseDiv.style.display = "none";
-}, 10000);
+  if (loading) {
+    verse.innerHTML = "Error! timeout";
+    setTimeout(() => (verse.style.display = "none"), 1000);
+  }
+}, 7000);
 
 alarmSound.load();
 ctx.translate(radius, radius);
@@ -74,24 +78,22 @@ function addEventListeners() {
  * Fetches bible verse
  */
 async function fetchBibleVerse() {
-  console.log("verse loading...");
   const options = { method: "GET", headers: { accept: "application/json" } };
   fetch("https://beta.ourmanna.com/api/v1/get?format=json&order=daily", options)
     .then((response) => response.json())
     .then((response) => {
+      loading = false;
       document.getElementById("verse").innerHTML =
         response.verse.details.text +
         `<br/>` +
         "<b>" +
         response.verse.details.reference +
         "</b>";
-      // setTimeout(
-      // () => (
-      // document.getElementById("verse").style.display = "block";
-      // ),
-      // 0);
     })
-    .catch((err) => console.error(err));
+    .catch((err) => {
+      loading = false;
+      console.error(err);
+    });
 }
 /**
  * Converts time from time picker to Date object
