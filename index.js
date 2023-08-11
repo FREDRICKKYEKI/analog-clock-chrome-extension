@@ -136,6 +136,10 @@ function formatTimeHM(time) {
   if (mins < 10) {
     mins = "0" + mins;
   }
+
+  if (hours < 10) {
+    hours = "0" + hours;
+  }
   return `${hours}:${mins}`;
 }
 
