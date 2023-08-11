@@ -7,11 +7,11 @@ Welcome to the Analog Clock Chrome Extension with Alarm and Daily Bible Verse pr
 
 To install and use the extension, follow these steps:
 
-1. **Download the Extension Files:** Download or clone the extension files from the GitHub repository: [analog-clock-chrome-extension](https://github.com/FREDRICKKYEKI/analog-clock-in-js).
+1. **Download the Extension Files:** Download or clone the extension files from the GitHub repository: [analog-clock-chrome-extension](https://github.com/FREDRICKKYEKI/analog-clock-chrome-extension).
 
     - For cloning...
          ```
-         git clone https://github.com/FREDRICKKYEKI/analog-clock-in-js.git
+         git clone https://github.com/FREDRICKKYEKI/analog-clock-chrome-extension.git
          ```
 
     - For downloading, click [here](https://github.com/FREDRICKKYEKI/analog-clock-in-js/archive/refs/heads/main.zip).
