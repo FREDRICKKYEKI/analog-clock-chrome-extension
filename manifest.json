@@ -1,6 +1,6 @@
 {
     "name": "Analog clock",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "analog clock",
     "manifest_version": 3,
     "author": "Fredrick Isaac",
@@ -8,8 +8,13 @@
         "default_popup": "index.html",
         "default_title": "Analog clock"
     },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "alarms",
+        "notifications"
+    ],
     "icons":{
-        "32":"media/899054.png"},
-    "background page":"index.html",
-    "permissions":["background"]
+        "32":"media/899054.png"}
 }
