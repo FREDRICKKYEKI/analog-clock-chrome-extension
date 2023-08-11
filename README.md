@@ -3,6 +3,19 @@
 
 Welcome to the Analog Clock Chrome Extension with Alarm and Daily Bible Verse project! This extension brings an analog clock to your Chrome browser's new tab page, along with the convenience of setting alarms and receiving daily Bible verses. Here's a comprehensive guide to using and understanding this extension.
 
+Certainly! Here's the Table of Contents for your Analog Clock Chrome Extension with Alarm and Daily Bible Verse project:
+
+### Contents
+1. [Introduction](#Introduction)
+2. [Installation](#Installation)
+3. [Features](#Features)
+4. [Usage](#Usage)
+5. [Customization](#Customization)
+6. [Credits](#Credits)
+7. [License](#License)
+8. [Contact](#Contact)
+
+
 ## Installation
 
 To install and use the extension, follow these steps:
