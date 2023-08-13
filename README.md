@@ -82,7 +82,7 @@ Tailor the extension to your preferences:
 
 ## License
 
-This extension is released under the MIT License. Refer to the `LICENSE` file for more details.
+This extension is released under the MIT License. Refer to the [`LICENSE`](./LICENSE) file for more details.
 
 ---
 
